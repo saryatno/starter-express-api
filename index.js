@@ -3,8 +3,8 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import serverless from "serverless-http";
-import postRoutes from "./src/routes/posts.js.js.js";
+//import serverless from "serverless-http";
+import postRoutes from "./routes/posts.js";
 
 const app = express();
 dotenv.config();
@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
     res.send('hello world')
   });
 
-module.exports.handlers = serverless(app);
+//module.exports.handlers = serverless(app);
 //await mongoose.connect(CONNECTION_URL)
 //    .then(() => app.listen(PORT, () => console.log('Server running on port : ${PORT}' )))
 //    .catch((error) => console.log(error.massage));
